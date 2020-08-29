@@ -11,7 +11,7 @@ def main():
             if i == 0 or j == 0:
                 dp[i][j] = 0
             elif wt[i-1] <= j:
-                dp[i][j] = max(value[i-1] + dp[i-1][j - wt[i-1]], dp[i-1][j])
+                dp[i][j] = max(value[i-1] + dp[i][j - wt[i-1]], dp[i-1][j])
             else:
                 dp[i][j] = dp[i-1][j]
     
